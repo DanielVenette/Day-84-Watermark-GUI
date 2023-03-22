@@ -1,6 +1,16 @@
 import PIL.Image
 from PIL import Image, ImageDraw, ImageFont
+import sys
+import os
 
+# code to allow the packaging of image files along with pyinstaller onefile
+def resource_path(relative_path):
+    try:
+        base_path = sys._MEIPASS
+    except Exception:
+        base_path = os.path.abspath(".")
+
+    return os.path.join(base_path, relative_path)
 
 class WaterMarker:
 
@@ -28,7 +38,7 @@ class WaterMarker:
             txt = Image.new("RGBA", im.size, (255, 255, 255, 0))
 
             # get a font
-            fnt = ImageFont.FreeTypeFont("C:/Windows/Fonts/FORTE.TTF", font_size)
+            fnt = ImageFont.FreeTypeFont(resource_path("fonts/FORTE.TTF"), font_size)
             text_width = fnt.getsize(message)[0]
             text_height = fnt.getsize(message)[1]
             # get a drawing context

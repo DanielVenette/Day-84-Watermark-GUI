@@ -1,3 +1,5 @@
+import sys
+import os
 from tkinter import *
 from tkinter import filedialog as fd
 import tkinter.font as font
@@ -14,6 +16,15 @@ global wm_opacity
 global text_rotation
 wm_opacity = 50
 text_rotation = 0
+
+# code to allow the packaging of image files along with pyinstaller onefile
+def resource_path(relative_path):
+    try:
+        base_path = sys._MEIPASS
+    except Exception:
+        base_path = os.path.abspath(".")
+
+    return os.path.join(base_path, relative_path)
 
 
 # select the file to be watermarked
@@ -152,7 +163,7 @@ canvas.config(width=500,
               )
 
 canvas.grid(column=0, row=0, rowspan=7, padx=15, pady=15)
-welcome_image = PhotoImage(file="owl_watermarked.png")
+welcome_image = PhotoImage(file=resource_path("owl_watermarked.png"))
 image_id = canvas.create_image(250, 250, image=welcome_image)
 
 # create a label asking user to choose an image to watermark
