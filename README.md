@@ -14,29 +14,48 @@ This application requires the following Python libraries:
 - tkinter
 - PIL (Pillow)
 
-## How to Use
+Sure, here's a detailed guide:
 
-1. Clone this repository or download the source code.
-2. Run `main.py` to start the GUI application.
-3. Click 'Browse' to select an image to watermark.
-4. Enter your desired watermark text in the 'Watermark text:' field.
-5. Choose the font size for your watermark text from the dropdown menu.
-6. Adjust the opacity of your watermark by clicking the '⬆' or '⬇' buttons.
-7. Adjust the rotation of your watermark by clicking the '↺' or '↻' buttons.
-8. Click 'Create Watermark' to watermark the image. The watermarked image will be saved in the same directory as the original image, with '_watermarked' appended to the original file name.
+## Pre-requisites
 
-## Important
+### Python
+This project requires Python 3. To install Python, follow the instructions provided in the official Python website:
 
-This project was built and tested on Python 3.x and tkinter 8.x. Ensure you are using these versions to avoid any issues.
+[Download Python](https://www.python.org/downloads/)
 
-Also, to ensure the GUI functions properly, `main.py` and `watermarker.py` should be in the same directory.
+### Git
+To clone the repository, you need Git installed on your system. Here are the official installation guides for different systems:
+
+- [Git for Windows](https://git-scm.com/download/win)
+- [Git for Mac](https://git-scm.com/download/mac)
+- [Git for Linux](https://git-scm.com/download/linux)
+
+## Clone Repository
+
+1. Open your terminal.
+2. Change the current working directory to the location where you want to clone the repository.
+3. Type `git clone https://github.com/DanielVenette/Day-84-Watermark-GUI.git`
+4. Press Enter to create your local clone.
+
+## Install Dependencies
+
+This project requires PIL (Pillow) and tkinter. Tkinter is included in the standard Python distribution so you don't need to install it separately. For PIL (Pillow), you can install it using pip:
+
+1. Open your terminal.
+2. Navigate to the cloned repository or your project directory.
+3. Run `python -m pip install pillow`
+
+This command will install the Pillow library, which is a fork of PIL (Python Imaging Library) and is more actively maintained.
+
+## Running the Application
+
+1. Navigate to the cloned repository or your project directory.
+2. Run `python main.py` to start the application.
+
+Please note that these instructions may vary based on your system configuration. If you encounter issues, feel free to raise an issue in the GitHub repository.
 
 ## Contributions
 
 Contributions to Day-84-Watermark-GUI are always welcome! Whether it's feature improvements, bug fixes, or simply spreading the word, all contributions help improve this project.
 
 Feel free to open issues or submit pull requests.
-
-## License
-
-MIT License
