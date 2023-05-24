@@ -14,8 +14,6 @@ This application requires the following Python libraries:
 - tkinter
 - PIL (Pillow)
 
-Sure, here's a detailed guide:
-
 ## Pre-requisites
 
 ### Python
